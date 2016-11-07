@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+ <form method="post" action="">
+	<label>登录名：</label>
+	<input id="name" type="text" value="例：张三">	</input>
+	<label>密码：(8位)</label>
+		<input id="password" type="password" value=""></input>
+	
+
+
+	<input placeholder="1345678" ></input>
+	<input type="submit" value="登录"></input>
+ </form>
+  
+ </body>
+</html>

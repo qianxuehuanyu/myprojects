@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body bgcolor="#AAAAAA">
+  <h1>这是&nbsp标题</h1><h2>这是&lt标题</h2><h3>这是&gt标题</h3>
+  <h4>这是&copy标题</h4><h5>这是标题</h5><h6>这是标题</h6>
+<!--   标题h1-h6 -->
+<b>1111</b><i>2222</i>
+<!-- 加粗和斜体 -->
+<p align="center"> duanluo</p>
+<p align="left"> duanluo</p>
+<p align="right"> duanluo</p>
+<!-- 段落中左右 -->
+<sup>333</sup><sub>444</sub>
+<br/>
+<!-- 换行 -->
+<!-- 上标和下标 -->
+<pre>
+			23
+		23		23
+			23
+</pre>
+<!-- 保留空格换行的段落/预格式化 -->
+<hr size="3px"width="100px"align="right"color="blue"/>
+<hr size="1px"width="440px"align="center"color="red"/>
+<!-- 线条 -->
+<div><img height="100px" src="../img/1.jpg" />
+<!-- 父目录相对路径 +高度-->
+</div>
+<div><img src="1.jpg" />
+<!--目录相对路径 +高度-->
+</div
+<div><img width="200px" src="http://127.0.0.1:8020/day_four_five/img/UCbrand.jpg" />
+<!-- 完整的路径 +宽度-->
+</div>
+<div><img src="file:///D:/editplus_projects/day01/img/1.jpg" alt="二哈"/>
+<!-- 根相对路径+alt -->
+</div>
+<div>
+<a href="https://www.baidu.com/" target="_blank"> 1</a>
+<a href="https://www.baidu.com/" target="_self">2 </a>
+<a href="https://www.baidu.com/" target="_parent">3 </a>
+<!-- 页面跳转，默认/本页面/子页面 -->
+</div>
+<div>
+<a href="111.rar" target="_blank"> 下载</a>
+<!-- 文件下载 -->
+<a href="#" target="_blank"> 锚点</a>
+<!-- 页面跳转，默认/本页面/子页面 -->
+</div>
+
+ </body>
+</html>

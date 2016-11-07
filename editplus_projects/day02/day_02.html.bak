@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body>
+ <div>
+ <table height="100px" width="100px" border="2px" align="left" cellpadding="10px"cellspacing="20px" bgcolor="pink">
+ <!-- 表格 高+宽+边框+左对齐+单元格内边距+单元格外边距+背景颜色 -->
+ <caption>1111111111122</caption>
+<!-- 表格标题 -->
+ 	<tr>
+		<td colspan="4"align="left">1</td><td rowspan="4" valign="top">1</td>
+	</tr>
+	<tr>
+		<td rowspan="4"valign="bottom">1</td><td colspan="2"align="left">1</td><td rowspan="2"valign="top">1</td>
+	</tr>
+	<tr>
+		<td rowspan="2"valign="bottom">1</td><td>1</td>
+	</tr>
+	<tr>
+		<td colspan="2"align="right">1</td>
+	</tr>
+	<tr>
+		<td colspan="4"align="right">1</td>
+	</tr>
+  </table>
+<!-- 单元格跨行+跨列+单元格内容上下左右对齐方式 -->
+<table>
+<thead>
+<tr><td>11111</td></tr>
+</thead>
+<!-- 表头 -->
+<tbody>
+<tr><td>2222</td></tr>
+</tbody>
+<!-- 表主体 -->
+<tfoot>
+<tr><td>33333</td></tr>
+</tfoot>
+<!-- 表尾 -->
+</table>
+<table>
+	<tr><td>33333</td>td>33333</td></tr>
+	<tr><td>33333</td>
+	<tr><td><table>
+			<tr><td>11111</td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr><td>33333</td></tr>
+</table>
+
+<!-- 结构标签/语义化标签 -->
+<header></header><!-- 头部 -->
+<nav></nav><!-- 导航 -->
+<section></section><!-- 节、段落、分块区域、页眉页脚 -->
+<article></article><!-- 独立与文档的部分条目，例：评论，帖子 -->
+<footer></footer><!-- 尾部/底部 -->
+<aside></aside><!-- 左右侧边栏，广告栏等 -->
+</div>
+<div>
+	<ol type="1">
+		<li> 123214</li>
+		<li><ul>
+			<li>1234</li>
+			<li>1234</li>
+			<li><ol>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+					<li>1</li>
+				</ol>
+			</li>
+			<li>
+				<dl>
+					<dt>
+					abcd
+					</dt>
+					<dd>
+					aaaa
+					</dd>
+				</dl>
+			</li>
+			</ul>
+		</li>
+		<li><ul>
+			<li>1234</li>
+			<li>1234</li>
+			</ul>
+		</li>
+		<li>
+				<dl>
+					<dt>
+					abcd
+					</dt>
+					<dd>
+					aaaa
+					</dd>
+				</dl>
+		</li>
+	</ol>
+
+	<ol type="1">
+		<li>
+			<ol type="a">
+			<li>1</li>
+			<li>1</li>
+			</ol>
+		</li>
+		<li>1</li>
+		<li>1</li>
+	</ol>
+	<ol type="D">
+			<li>1</li>
+			<li>1</li>
+			</ol>
+	<ol type="Ⅳ">
+		<li>1</li>
+		<li>1</li>
+	</ol>
+
+	<ul type="disc">
+		<li>
+			<ul type="circle">
+			<li>1</li>
+			<li>1</li>
+			</ul>
+		</li>
+		<li>1</li>
+		<li>1</li>
+	</ul>
+	<ul type="square">
+		<li>1</li>
+		<li>1</li>
+	</ul>
+	<ul>
+		<li>1</li>
+		<li>1</li>
+	</ul>
+
+<!-- 	有序列表ol无序列表ul自定义列表dl>dt+dl 以及相互之间的嵌套，ol的前标格式三种，ul的点格式三种
+dl>dt+dd dt为标题 dd为内容
+-->
+</div>
+
+
+		<form>
+		<!-- 表单控件三元素 input select textarea 有action name method等属性（提交地址，名称，提交方式get/post）-->
+			<div>
+
+		<!-- input的主要属性：id name type类型 value值（默认值） disabled（禁用控件） -->
+				<laber>提交按钮：</laber>
+				<input type="submit" value="提交OK" />
+			</div>
+			<div>
+				<laber>文本框：</laber>
+				<input type="text" value="" />
+			</div>
+			<div>
+				<laber>密码：</laber>
+				<input type="password" value="" />
+			<!-- 	password额外属性：maxlength  readonly -->
+			</div>
+			<div>
+				<laber>单选：</laber>
+				<input type="radio" value="男" />
+				<input type="radio" value="女" />
+			</div>
+			<div>
+				<laber>复选按钮：</laber>
+				<input type="checkbox" name="love"  checked="checked">逛街</input>
+				<input type="checkbox" name="love">爱美食</input>
+				<input type="checkbox" name="love">爱哭</input>
+				<input type="checkbox" name="love">宅腐</input>
+				<input type="checkbox" name="love">玩游戏</input>
+				<input type="checkbox" name="love">旅行</input>
+
+			<!-- 	checkbox和radio的额外属性：checked 默认选中 -->
+			</div>	
+			<div id="111">
+				<laber for="111">隐藏：</laber>
+				<input type="hidden"/>
+<!-- 				for="id"将文本和ID相关的联系起来，点击文本如同点击控件一样 -->
+			</div>
+			<div>
+				<laber>上传：</laber>
+				<input type="file"/>
+				
+			</div>
+			<div>
+				<laber>按钮：</laber>
+				<input type="button" value="111222"/>
+				<button >12343</button>
+				
+			</div>
+			<div>
+				<laber>图片：</laber>
+				<input type="image" src="111.jpg"></input>
+			</div>			
+			<div>
+				<laber>重置：</laber>
+				<input type="reset" value="重置"/>
+		
+			</div>
+			<!-- 	input的常用类型：button按钮，file文件流，image图片，reset数据重置，text文本，password密码，checkbox多选框，radio单选框，submit提交 -->
+		
+			<div>
+			<select name="city">
+				<option selected="selected">1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+<!-- select+option下拉框 select属性:size大于1为滚动列表，否则为下拉；name：名称;，multiple：多选-->
+			</select>
+			<select name="city" size="3" multiple="mutiple" >
+				<option selected="selected">1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</div>
+			<div>
+				<textarea cols="5" rows="10" ></textarea>
+				<!--文本域 rows指定行数，cols指定列数 readonly：只读-->
+			</div>
+			</form>
+			<div>
+				<fieldset> <!-- 为控件分组 -->
+					<legend>1111</legend><!-- 为分组指定标题 -->
+					1111111
+				</fieldset>
+			</div>
+
+			<div>
+				<iframe src="img/002.jpg" frameborder="1" scorling="yes" width="100px">
+					你该换浏览器了（不支持iframe的时候显示，iframe可以设置宽高）
+				frameborder="0/1" 显示外边框，scroling="no/yes"显示滚动条
+				</iframe>
+				<iframe src="img/002.jpg" frameborder="1" scorling="no" width="300px">
+					你该换浏览器了（不支持iframe的时候显示，iframe可以设置宽高）
+				frameborder="0/1" 显示外边框，scroling="no/yes"显示横滚动条
+				</iframe>
+			<!-- 浮动框架 不支持iframe的时候显示文字内容，iframe可以设置宽高 src指定url
+				frameborder="0/1" 显示外边框，scroling="no/yes"显示横滚动条-->
+			</div>
+			<div>
+				<details>
+					<summary>111</summary><!-- 展开前的信息 -->
+					<div>
+							展开出现的信息
+					</div>
+					<!--展开-->
+				</details>
+			</div>
+			<div>
+				<meter value="60" max="100" title="60%">
+				</meter>60%
+				<!--百分比条/柱状显示 max最大值 min最小值 vlaue为度量值默认为0-->
+			</div>
+			<div>
+				<time datetime="2011-7-11T14:15">13:22</time>
+				<!--时间-->
+			</div>
+			<div><p><mark>11111111111</mark></p>
+				<!--高亮-->
+			</div>
+			<div>
+				<marquee behavior="scroll" scrollamount="11" direction="up">
+					11111111113333333</marquee>
+					<!--动作类型+速度+方向+高宽-->
+				
+			</div>
+
+ </body>
+</html>

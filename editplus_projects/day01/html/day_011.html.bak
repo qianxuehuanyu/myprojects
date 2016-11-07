@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ </head>
+ <body text="pink" bgcolor="#000">
+ <br/> 11111111111111
+ 111111111111111 <br/>
+<div width="100px" height="1px" style="border:1px solid white">
+<br/> 11111111111111
+ <br/>111111111111111 
+</div>
+  
+<div width="100px" height="1px" style="border:1px solid white">
+   11111111111111<br/>
+ 111111111111111 <br/>
+</div>
+ </body>
+</html>
