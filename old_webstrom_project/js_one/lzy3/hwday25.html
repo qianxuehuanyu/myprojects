@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>仅允许小明同学登录。。。。。。</p>
+    <label>用户名：</label>
+    <input type="text" id="name" placeholder="输入拼音"/>
+    <label>密码：</label>
+    <input type="password" id="password" placeholder="输入6位密码"/>
+    <button onclick="aa()">登录</button>
+    <button onclick="bb()">清除</button>
+<script>
+        function aa() {
+        var in_name = document.getElementById("name");
+        var in_password = document.getElementById("password");
+        var name = in_name.value;var password=in_password.value;
+            if(name.length!=0&&password.length!=0 && password.length<=6){
+                if(name=="xiaoming"&&password=="123456"){
+                    alert("登录成功！");
+                }else{
+                    alert("登录失败，账号或密码错误。");
+                }
+            }else{
+                alert("输入不符合格式或账号/密码为空");
+            }
+        console.log(name+"");
+    }
+    function bb(){
+        var in_name = document.getElementById("name");
+        var in_password = document.getElementById("password");
+        in_name.value="";
+        in_password.value="";
+    }
+</script>
+</body>
+</html>

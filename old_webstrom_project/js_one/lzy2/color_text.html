@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--题目二=========================================-->
+<script>
+    function week2_work(){
+    var color=[["red","红色"],["gray","灰色"],["green","绿色"],["yellow","黄色"],["blue","蓝色"],["pink","粉色"],["orange","橙色"],["gold","金色"]];
+    var in_box=[{id:"top"},{id:"bone"},{id:"btwo"},{id:"bthree"}];
+    var box=document.createElement("div");
+    document.body.appendChild(box);
+    box.style.height="260px";
+    box.style.width="400px";
+    var p=document.createElement("p");
+    p.style.fontSize="20px";
+    p.innerHTML="选出和第一个方块中文字颜色对应的文字";
+    box.appendChild(p);
+    for(var i=0;i<in_box.length;i++){
+        var info=in_box[i];
+        var parem=document.createElement("div");
+        parem.style.width="100px";
+        parem.style.height="100px";
+        parem.id=info.id;
+        parem.style.borderWidth="2px";
+        parem.style.fontSize="20px";
+        parem.style.fontWeight="bold";
+        parem.style.textAlign="center";
+        parem.style.lineHeight="100px";
+        if(i==0){
+            parem.style.marginLeft="130px";
+        }else{
+            parem.style.margin="10px";
+            parem.style.display="inline-block";
+        }
+        box.appendChild(parem);
+    }
+        var open=0;
+    var p_scrile=document.createElement("p");
+        p_scrile.style.fontSize="20px";
+        p_scrile.id="p_scrile";
+        p_scrile.innerHTML="当然分数为："+open;
+        box.appendChild(p_scrile);
+
+        var random_text_color=0;var choose_color=0;
+        function random_num(){
+            var rn_one=parseInt(Math.random()*8);
+            var rn_two=parseInt(Math.random()*8);
+            var rn_three=parseInt(Math.random()*8);
+            while(rn_one==rn_two||rn_one==rn_three||rn_two==rn_three){
+                rn_two=parseInt(Math.random()*8);
+                rn_three=parseInt(Math.random()*8);
+            }
+            var change_color=[color[rn_one],color[rn_two],color[rn_three]];
+            var top_one=parseInt(Math.random()*3);
+            switch (top_one){
+                case 0:{top_one=rn_one;}break;
+                case 1:{top_one=rn_two;}break;
+                case 2:{top_one=rn_three;}break;
+            }
+            random_text_color=top_one;
+            console.log(random_text_color+"----"+top_one);
+            var top_two=0;var top_three=0;
+            while(top_one==top_two||top_one==top_three||top_two==top_three){
+                top_two=parseInt(Math.random()*8);
+                top_three=parseInt(Math.random()*8);
+            }
+            var r_top=document.getElementById(in_box[0].id);
+                r_top.style.color=color[top_one][0];
+                r_top.innerHTML=color[top_three][1];
+                r_top.style.background=color[top_two][0];
+            var sicrl=document.getElementById("p_scrile");
+            for(var i=1;i<in_box.length;i++){
+                var r_change=document.getElementById(in_box[i].id);
+                switch(i){
+                    case 1:{
+                        r_change.style.color=change_color[0][0];
+                        r_change.style.background=change_color[2][0];
+                        r_change.innerHTML=change_color[1][1];
+                        r_change.onclick=function(){
+                            choose_color=1;
+                         if(change_color[1][0]==color[random_text_color][0]){
+                                alert("great!正确，请继续");
+                                open++;
+                             sicrl.innerHTML="当然分数为："+open;
+                         }else{
+                                alert("worry!错误，失败");
+                                clearInterval(time_function);
+                                alert("结束！")
+                            }
+                        }
+                    }break;
+                    case 2:{
+                        r_change.style.color=change_color[1][0];
+                        r_change.style.background=change_color[0][0];
+                        r_change.innerHTML=change_color[2][1];
+                        r_change.onclick=function(){
+                            choose_color=1;
+                            if(change_color[2][0]==color[random_text_color][0]){
+                                alert("great!正确，请继续");
+                                open++;
+                                sicrl.innerHTML="当然分数为："+open;
+                            }else{
+                                alert("worry!错误，失败");
+                                clearInterval(time_function);
+                                alert("结束！")
+                            }
+                        }
+                    }break;
+                    case 3:{
+                        r_change.style.color=change_color[2][0];
+                        r_change.style.background=change_color[1][0];
+                        r_change.innerHTML=change_color[0][1];
+                        r_change.onclick=function(){
+                            choose_color=1;
+                            if(change_color[0][0]==color[random_text_color][0]){
+                                alert("great!正确，分数+1，请继续");
+                                open++;
+                                sicrl.innerHTML="当然分数为："+open;
+                            }else{
+                                alert("worry!错误，失败");
+                                clearInterval(time_function);
+                                alert("结束！")
+                            }
+                        }
+                    }break;
+                }
+            }
+        }
+        random_num();
+        var time_function=setInterval(random_num,3000);
+}
+    week2_work();
+</script>
+</body>
+</html>

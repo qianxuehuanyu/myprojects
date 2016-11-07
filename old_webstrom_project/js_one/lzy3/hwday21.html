@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a id="in_time"></a>
+<!--1.完成数字时钟：周二下午03:01 这种格式-->
+<script>
+    var date_now=new Date();
+    console.log(date_now);
+    var dn_year=date_now.getFullYear();
+    var dn_month=date_now.getMonth();
+    var dn_date=date_now.getDate();
+    var dn_day=date_now.getDay();
+    switch (dn_day){
+        case 0:{dn_day="周日";}break;
+        case 1:{dn_day="周一";}break;
+        case 2:{dn_day="周二";}break;
+        case 3:{dn_day="周三";}break;
+        case 4:{dn_day="周四";}break;
+        case 5:{dn_day="周五";}break;
+        case 6:{dn_day="周六";}break;
+    }
+    console.log(dn_day);
+    var dn_hour=date_now.getHours();
+    var dn_time=String(date_now);
+    dn_time=dn_time.substring(18,24);
+    console.log(dn_time);
+    function aa(){
+        dn_hour=dn_hour>12?dn_hour-12:dn_hour;
+        var on_white=document.getElementById("in_time");
+        on_white.innerHTML=dn_year+"/"+dn_month+"/"+dn_date+" "+dn_day+" "+dn_hour+dn_time;
+    }
+    aa();
+    function bb(){
+        date_now=new Date();
+        dn_year=date_now.getFullYear();
+        dn_month=date_now.getMonth();
+        dn_date=date_now.getDate();
+        dn_hour=date_now.getHours();
+        dn_hour=dn_hour>12?"下午"+(dn_hour-12):"上午"+dn_hour;
+        dn_day=date_now.getDay();
+        switch (dn_day){
+            case 0:{dn_day="周日";}break;
+            case 1:{dn_day="周一";}break;
+            case 2:{dn_day="周二";}break;
+            case 3:{dn_day="周三";}break;
+            case 4:{dn_day="周四";}break;
+            case 5:{dn_day="周五";}break;
+            case 6:{dn_day="周六";}break;
+        }
+        dn_time=String(date_now);
+        dn_time=dn_time.substring(18,24);
+        aa();
+    };
+    bb();
+    setInterval(bb,1000);
+</script>
+</body>
+</html>

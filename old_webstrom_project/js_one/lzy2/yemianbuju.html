@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--题目四====================================-->
+<script>
+    function now () {
+        document.body.style.backgroundColor = "black";
+        var top = document.createElement("div");
+        top.style.width = "1000px";
+        top.style.height = "100px";
+        top.style.margin = "auto";
+        top.style.background = "blue";
+        document.body.appendChild(top);
+        var bottom = document.createElement("div");
+        bottom.style.width = "1000px";
+        bottom.style.height = "400px";
+        bottom.style.margin = "auto";
+        bottom.style.marginTop = "20px";
+        bottom.style.background = "blue";
+        bottom.style.overflow="hidden";
+        document.body.appendChild(bottom);
+        var bottom_topleft = document.createElement("div");
+        bottom_topleft.style.width = "100px";
+        bottom_topleft.style.height = "240px";
+        bottom_topleft.style.float="left";
+        bottom_topleft.style.marginTop = "10px";
+        bottom_topleft.style.marginLeft = "10px";
+        bottom_topleft.style.background = "green";
+        bottom.appendChild(bottom_topleft);
+        var bottom_topright = document.createElement("div");
+        bottom_topright.style.width = "860px";
+        bottom_topright.style.height = "240px";
+        bottom_topright.style.float="left";
+        bottom_topright.style.marginTop = "10px";
+        bottom_topright.style.marginLeft = "20px";
+        bottom_topright.style.background = "green";
+        bottom.appendChild(bottom_topright);
+        var bottom_bottom = document.createElement("div");
+        bottom_bottom.style.width = "980px";
+        bottom_bottom.style.height = "100px";
+        bottom_bottom.style.float="left";
+        bottom_bottom.style.marginTop = "40px";
+        bottom_bottom.style.marginLeft = "10px";
+        bottom_bottom.style.background = "green";
+        bottom.appendChild(bottom_bottom);
+    }
+now();
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    /**
+//     * Created by liuyujing on 16/9/26.
+//     */
+//
+//    (function () {
+//        /*
+//         function move(type) {
+//         if(type==="window"){
+//         console.log("window");
+//         }else {
+//         console.log("otheer");
+//         }
+//         }
+//
+//         window.move("");
+//         */
+//
+//
+//        function Person() {
+//
+//            //this.__proto__.constructor :this是使用那个构造器来创建
+//            console.log(this.__proto__.constructor);
+//
+//            if(this.__proto__.constructor === Person){
+//                this.speak = function () {
+//                    console.log("Person");
+//                }
+//            }
+//            if(this.__proto__.constructor === Chinese){
+//                this.speak = function () {
+//                    console.log("Chinese");
+//                }
+//            }
+//            if(this.__proto__.constructor === English){
+//                this.speak = function () {
+//                    console.log("English");
+//                }
+//            }
+//
+//        }
+//
+//        function Chinese() {
+//            Person.call(this);
+//        }
+//
+//        function English() {
+//            Person.call(this);
+//        }
+//
+//        function inherit(subType,superType) {
+//            var _prototype = Object.create(superType.prototype);
+//            _prototype.constructor = subType;
+//            subType.prototype = _prototype;
+//        }
+//
+//        inherit(Chinese,Person);
+//        inherit(English,Person);
+//
+//        var xiaoMing = new Chinese();
+//        xiaoMing.speak();
+//
+//        var tom = new English();
+//        tom.speak();
+//    })();
+
+</script>
+<script>
+//    /**
+//     * Created by liuyujing on 16/9/26.
+//     */
+//    (function () {
+//        /*
+//         function move(type) {
+//         if(type==="window"){
+//         console.log("window");
+//         }else {
+//         console.log("otheer");
+//         }
+//         }
+//         window.move("");
+//         */
+//
+//        function Person() {
+//            //this.__proto__.constructor :this是使用那个构造器来创建
+//            console.log(this.__proto__.constructor);
+//
+//            this.speak = function () {
+//                if(this.__proto__.constructor === Person){
+//                    console.log("Person");
+//                }
+//                if(this.__proto__.constructor === Chinese){
+//                    console.log("Chinese");
+//                }
+//                if(this.__proto__.constructor === English){
+//                    console.log("English");
+//                }
+//            };
+//        }
+//        function Chinese() {
+//            Person.call(this);
+//        }
+//        function English() {
+//            Person.call(this);
+//            console.log("1111");
+//        }
+//        function inherit(subType,superType) {
+//            var _prototype = Object.create(superType.prototype);
+//            _prototype.constructor = subType;
+//            subType.prototype = _prototype;
+//        }
+//        inherit(Chinese,Person);
+//        inherit(English,Person);
+//        //转换数据类型的方法（不同的父类 不能转换数据类型）
+//        /*
+//         * obj 要转换的对象名
+//         * className 要转换成为的数据类型（类名）
+//         * */
+//        function returnType(obj,className) {
+//            obj.__proto__.constructor = className;
+//        }
+//        var xiaoMing = new Chinese();
+//        returnType(xiaoMing,English);
+//        xiaoMing.speak();
+//        // var tom = new English();
+//        // tom.speak();
+//        console.log(xiaoMing);
+//    })();
+
+</script>
+<script></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//1.[2,99,54,33,86,1]冒泡排序 从小到大
+    function one(){
+        var one_list=[2,99,54,33,86,1];
+        one_list.sort(function(a,b){
+            return a-b;
+        });
+        console.log(one_list);
+    }
+one();
+//    2.一瓶啤酒3块钱 5个瓶子换一瓶啤酒 写一个函数 输入酒瓶数量 可以得到需要支付的总额和啤酒瓶 以及余下的酒瓶
+function two(){
+    var buy_num=prompt("输入需要购买的酒的数量");
+    var p_num=prompt("拥有的酒瓶的数量");
+    var money_num=buy_num-parseInt(p_num/5);
+    var lost=money_num>0?p_num%5:(p_num-buy_num*5);
+    var money=money_num>0?money_num*3:0;
+    console.log("需要购买"+buy_num+"瓶酒"+",手中有"+p_num+"个酒瓶;"+"\n"+"需要花费"+money+"元，手中剩下的瓶子为"+lost+"个");
+}
+two();
+//    3.石头剪子布 界面
+function three(){
+    var box=document.createElement("div");
+    document.body.appendChild(box);
+    var list=[{name:"石头",srcc:"img/shitou.png",id:"shitou"},{name:"剪刀",srcc:"img/jiandao.png",id:"jiandao"},{name:"布",srcc:"img/bu.png",id:"bu"},{name:"电脑",srcc:"",id:"computer"}];
+    for(var i=0;i<list.length;i++){
+        var indiv=document.createElement("div");
+        indiv.style.cssText="height:100px;width:100px;margin:5px;";
+        indiv.style.float="left";
+        indiv.id=list[i].id;
+        if(i==(list.length-1)){
+            indiv.style.clear="both";
+            indiv.style.background="blue";
+        }
+        box.appendChild(indiv);
+        var id_img=document.createElement("img");
+        id_img.style.cssText="width:100px;height:100px";
+        id_img.src=list[i].srcc;
+        indiv.appendChild(id_img);
+    }
+
+    function computer(){
+        var change_c=parseInt(Math.random()*3);
+        var computer_id=document.getElementById("computer");
+        var computer_img=computer_id.getElementsByTagName("img");
+        switch (change_c){
+            case 0:{computer_img[0].src=list[change_c].srcc}break;
+            case 1:{computer_img[0].src=list[change_c].srcc}break;
+            case 2:{computer_img[0].src=list[change_c].srcc}break;
+        }
+    }
+    setInterval(computer,1000);
+}
+three();
+//    4.实现多重继承 人类 中国人 北京人
+(function(){
+    function inherit(supuer,sub) {
+        var _prototype = Object.create(supuer.prototype);
+        _prototype.constructor = sub;
+        sub.prototype = _prototype;
+    }
+
+    var Person=function(_intype){
+        this.type="属于人类";
+        this.behavior=_intype;
+        this.walk=function(){
+            console.log("输出成功，继承成功");
+        }
+    };
+    var Chinese=function(_intype,_inline){
+        this.country="国籍：中国"
+        this.ouside=_inline;
+        Person.call(this,_intype);
+    };
+    inherit(Chinese,Person);
+    var Beijing=function(_intype,_inline,_inlocal){
+        this.living="生活在北京";
+        this.local=_inlocal;
+        Chinese.call(this,_intype,_inline);
+    }
+    inherit(Beijing,Chinese);
+    var xiaoming=new Beijing("活着","在国内","不是当地人");
+    console.log(xiaoming);
+    xiaoming.walk();
+
+})();
+
+//    5.打印99乘法表
+    function five(){
+        var on_char="";
+        for(var i=1;i<=9;i++){
+            for(var j=1;j<=i;j++){
+                var on=i*j;
+                on_char=on_char+j+"*"+i+"="+on+";";
+            }
+            console.log(on_char);
+            on_char="";
+        }
+    }
+    five();
+</script>
+</body>
+</html>

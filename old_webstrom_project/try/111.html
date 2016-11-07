@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="textml; charset=utf-8" />
+    <title>无标题文档</title>
+    <style type="text/css">
+        #a0{ width: 10px;height: 200px; background:#039; position:absolute; top:235px; left:245px; transform-origin:50% 0 ; transform:rotate(0deg);}
+        #a1{ width: 10px;height: 170px; background:#FF0; position:absolute; top:235px; left:245px; transform-origin:50% 0 ; transform:rotate(240deg);}
+        #a2{ width: 10px;height: 130px; background:#6F3; position:absolute; top:235px; left:245px; transform-origin:50% 0 ; transform:rotate(110deg);}
+        span{ display:block; width:30px; height:30px; position:absolute; color:#000; font-size:30px; font-weight:bold; text-align:center; line-height:30px; }
+        #b0{ top:0; left:235px;}
+        #b1{ top:235px; left:0;}
+        #b2{ top:470px; left:235px;}
+        #b3{ top:235px; left:470px;}
+    </style>
+</head>
+
+<body>
+
+<script>
+
+    var oDiv=document.createElement("div");
+    document.body.appendChild(oDiv);
+    oDiv.style.cssText="width:500px;height:500px;margin:50px 390px;background:#f00;border-radius:300px;position:relative;";
+    for(var i=0;i<3;i++){
+        var oP=document.createElement("p");
+        oP.style.display="block";
+        oP.style.position
+        oDiv.appendChild(oP);
+    }
+    var oPArr=oDiv.getElementsByTagName("p");
+    oPArr[0].id="a0";
+    oPArr[1].id="a1";
+    oPArr[2].id="a2";
+    for(var i=0;i<4;i++){
+        var oSpan=document.createElement("span");
+        oDiv.appendChild(oSpan);
+    }
+    var oSpanArr=oDiv.getElementsByTagName("span");
+    oSpanArr[0].id="b0";
+    oSpanArr[0].innerText="12";
+    oSpanArr[1].id="b1";
+    oSpanArr[1].innerText="9";
+    oSpanArr[2].id="b2";
+    oSpanArr[2].innerText="6";
+    oSpanArr[3].id="b3";
+    oSpanArr[3].innerText="3";
+
+</script>
+</body>
+<ml>

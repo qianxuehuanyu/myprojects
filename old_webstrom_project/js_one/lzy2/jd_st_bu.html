@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="twday3.css">-->
+</head>
+<body>
+<!--第三题，用页面打开后 直接开始游戏-->
+
+<script>
+    function createView() {
+        var list = [{mark:"jiandao",color:"red",text:"剪刀"},{mark:"shitou",color:"blue",text:"石头"},{mark:"bu",color:"green",text:"布"},{mark:"computer",color:"gray"}];
+        var backgroundView = document.createElement("div");
+        backgroundView.style.width="400px";
+        backgroundView.style.height="300px";
+        document.body.appendChild(backgroundView);
+        var two_h2=document.createElement("h2");
+        two_h2.innerHTML="第三题";
+        backgroundView.appendChild(two_h2);
+        for (var i=0;i<list.length;i++){
+            var info = list[i];
+            var view = document.createElement("div");
+            view.style.height = "100px";
+            view.style.width = "100px";
+            view.style.background = info.color;
+            view.style.margin = "5px";
+            view.id = info.mark;
+            view.style.border="1px solid #333";
+            view.style.textAlign="center";
+            view.style.fontSize="20px";
+            view.style.lineHeight="100px";
+            view.style.color="white";
+            view.style.fontWeight="bold";
+            if (i===list.length-1){
+                view.style.clear = "both";
+            }else{
+                view.style.display="inline-block";
+            }
+            backgroundView.appendChild(view);
+            var on_img=document.getElementById(info.mark);
+            var company_img=document.createElement("img");
+            company_img.style.width="100px";
+            company_img.style.height="100px";
+            on_img.appendChild(company_img);
+            switch (i){
+                case 0:{company_img.src="img/jiandao.png"}break;
+                case 1:{company_img.src="img/shitou.png"}break;
+                case 2:{company_img.src="img/bu.png"}break;
+                case 3:{company_img.src="img/bu.png"}break;
+            }
+        }
+        var two_p=document.createElement("p");
+        two_p.id="t_one";
+        two_p.innerHTML=".....";
+        backgroundView.appendChild(two_p);
+    }
+    createView();
+    var company_change=0;
+    function company(){
+        company_change=parseInt(Math.random()*3+1);
+        var change_img=document.getElementById("computer");
+        console.log(change_img);
+        var cc_img=change_img.getElementsByTagName("img");
+        console.log(cc_img);
+        switch (company_change){
+            case 1:{
+                cc_img[0].src="img/jiandao.png";
+            }break;
+            case 2:{
+                cc_img[0].src="img/shitou.png";
+            }break;
+            case 3:{
+                cc_img[0].src="img/bu.png";
+            }break;
+        }
+        setTimeout(function() {
+            company();
+        }, 100);
+    }
+    company();
+    var p_text=document.getElementById("t_one");
+    var p_arrey=["剪刀","石头","布"];
+    var one=document.getElementById("jiandao");
+    var two=document.getElementById("shitou");
+    var three=document.getElementById("bu");
+    var num=0;
+    one.onclick=function(){
+        num=1;
+        one.style.color="black";two.style.color="white";
+        three.style.color="white";
+        if(num==company_change){
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  平局";
+        }else if((num-company_change)==1||(num-company_change)==-2){
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  你赢了";
+        }else{
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  你输了";
+        }
+    };
+    two.onclick=function(){
+        num=2;
+        one.style.color="white";two.style.color="black";
+        three.style.color="white";
+        if(num==company_change){
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  平局";
+        }else if((num-company_change)==1||(num-company_change)==-2){
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  你赢了";
+        }else{
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  你输了";
+        }
+    };
+    three.onclick=function(){
+        num=3;
+        one.style.color="white";two.style.color="white";
+        three.style.color="black";
+        if(num==company_change){
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  平局";
+        }else if((num-company_change)==1||(num-company_change)==-2){
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  你赢了";
+        }else{
+            p_text.innerHTML=p_arrey[num-1]+":"+p_arrey[company_change-1]+"  你输了";
+        }
+    };
+
+</script>
+</body>
+</html>

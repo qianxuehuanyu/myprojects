@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--2.完成时钟界面-->
+<script>
+    var box=document.createElement("div");
+    box.style.cssText="width:200px;height:200px;border:1px solid #111;border-radius:50%;position:relative;";
+    document.body.appendChild(box);
+
+    var second=document.createElement("div");
+    second.style.cssText="width:1px;height:90px;position:absolute;" +
+            "left:100px;top:10px;background-color:red;z-index:30;";
+    second.id="second";
+    box.appendChild(second);
+    var minute=document.createElement("div");
+    minute.style.cssText="width:3px;height:60px;position:absolute;" +
+            "left:99px;top:40px;background-color:blue;z-index:20;border-radius:1px;";
+    minute.id="minute";
+    box.appendChild(minute);
+    var hour=document.createElement("div");
+    hour.style.cssText="width:5px;height:30px;position:absolute;" +
+            "left:98px;top:70px;background-color:black;z-index:10;border-radius:3px;";
+    hour.id="hour";
+    box.appendChild(hour);
+
+    var date_now=new Date();
+    var d_second=date_now.getSeconds();
+    var d_minute=date_now.getMinutes();
+    var d_hour=date_now.getHours();
+    console.log(d_second+"==="+d_minute+"===="+d_hour+"===");
+
+    var n_s=document.getElementById("second");
+    n_s.style.transformOrigin="50% 100%";
+    var n_m=document.getElementById("minute");
+    n_m.style.transformOrigin="50% 100%";
+    var n_h=document.getElementById("hour");
+    n_h.style.transformOrigin="50% 100%";
+    var i=0;
+    function time_walk(){
+        n_s.style.transform="rotate("+(d_second*6+i*6)+"deg)";
+        n_m.style.transform="rotate("+(d_minute*6+parseInt(d_second/60)*6+parseInt(i/60)*6)+"deg)";
+        n_h.style.transform="rotate("+(d_hour*30+parseInt(d_minute/12)*6+parseInt(i/7200)*6)+"deg)";
+        i++;
+    }
+    setInterval(time_walk,1000);
+</script>
+</body>
+</html>

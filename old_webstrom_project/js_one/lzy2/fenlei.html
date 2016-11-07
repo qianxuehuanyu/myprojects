@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--题目1======================-->
+<!--用5个js文件将分类继承划分为动物+英雄（法术、物理）+怪物（法术、物理）+继承+main-->
+<!--<script>-->
+    <!--var Animal = function (_name,_type) {-->
+        <!--this.name = _name;-->
+        <!--this.type = _type;-->
+        <!--this.move = function () {-->
+            <!--console.log("走走走~");-->
+        <!--}-->
+        <!--// var age = 10;//私有变量-->
+        <!--//私有方法-->
+        <!--// function move() {-->
+        <!--//     console.log("走走走~");-->
+        <!--// }-->
+    <!--};-->
+    <!--Animal.prototype.att = function () {-->
+        <!--console.log("咬你");-->
+    <!--};-->
+    <!--Animal.prototype.attr="123";-->
+
+    <!--var Monster = function (_blood,_name,_type) {-->
+        <!--//apply(this,[参数数组]);-->
+        <!--//call(this,参数列表);-->
+        <!--//arguments参数列表-->
+        <!--// Animal.apply(this,[_name,_type]);-->
+        <!--// Animal.apply(this,arguments);-->
+        <!--Animal.call(this,_name,_type);-->
+        <!--this.blood = _blood;-->
+    <!--};-->
+
+    <!--function inherit(supuer,sub) {-->
+        <!--var _prototype = Object.create(supuer.prototype);-->
+        <!--_prototype.constructor = sub;-->
+        <!--sub.prototype = _prototype;-->
+    <!--}-->
+    <!--inherit(Animal,Monster);-->
+
+    <!--var wa = new Monster(100,"青蛙","两牺");-->
+    <!--wa.move();-->
+    <!--wa.att();-->
+    <!--console.log(wa);-->
+
+    <!--//wa->Monster->Object-->
+    <!--//?Monster->Object-->
+    <!--//call->Animal.this-->
+    <!--//Animal->Object-->
+    <!--//Animal 添加的 原型方法 -> Monster 不能用-->
+    <!--console.log(Monster.prototype.att);-->
+    <!--console.log(Animal.prototype.att);-->
+
+<!--</script>-->
+<script src="Animal.js"></script>
+<script src="Inherit.js"></script>
+<script src="Hero.js"></script>
+<script src="Monster.js"></script>
+<script src="Main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.box{
+    width:600px;
+    height:400px;
+    border:1px solid #444;
+    position: relative;
+}
+#on{
+    position: absolute;
+    left:45%;
+    bottom: 0px;
+    background: #090;
+}

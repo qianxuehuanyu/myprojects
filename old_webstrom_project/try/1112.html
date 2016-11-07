@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>按钮点击后运行的功能</title>
+    <SCRIPT>
+        function run(){
+            {
+                var test=document.getElementById("test");
+                str=test.value;
+                go=open('','运行','');
+                go.document.open();
+                go.document.write(str);
+                go.document.close();
+            }
+        }
+    </SCRIPT>
+</head>
+<body>
+<INPUT onclick=run() type=button value="运行"><br>
+    <TEXTAREA id="test" rows=9 cols=46>
+    </TEXTAREA>
+
+</body>
+</html>

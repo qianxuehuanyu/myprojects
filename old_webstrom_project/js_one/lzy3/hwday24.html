@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="hwday24.css">
+</head>
+<body>
+<div id="box"></div>
+<script>
+    var inbox=document.getElementById("box");
+    inbox.style.cssText="width:600px;height:200px;border:2px solid #444;";
+    for(var i=0;i<6;i++){
+        var in_a=document.createElement("div");
+        in_a.style.cssText="width:50px;height:20px;float:left;";
+        in_a.style.background="#aaa";
+        in_a.style.marginLeft="30px";
+        in_a.style.marginRight="10px";
+        in_a.innerHTML=i+":"+i;
+        in_a.id="a"+i;
+        in_a.style.textAlign="center";
+        inbox.appendChild(in_a);
+    }
+    var inlist=inbox.getElementsByTagName("div");
+
+    for(var i=0;i<inlist.length;i++){
+        var inlist_num=parseInt(Math.random()*4+3);
+        var inlist_ul=document.createElement("ul");
+        inlist_ul.style.position="relative";
+        inlist_ul.style.display="none";
+        inlist[i].appendChild(inlist_ul);
+        for(var j=0;j<inlist_num;j++){
+            var inin_div=document.createElement("li");
+            inin_div.style.background="#ddd";
+            inin_div.style.color="black";
+            inin_div.style.margin="0px";
+            inin_div.innerHTML=i+"+"+j+":";
+            inlist_ul.appendChild(inin_div);
+//            console.log(i+"+"+j);
+        }
+
+    }
+    (function(){
+        var onid0=inlist[0];
+        var onid0_ul=onid0.getElementsByTagName("ul");
+        onid0.onmouseover = function () {
+            onid0.style.background = "red";
+            onid0.style.color="white";
+            onid0_ul[0].style.display="block";
+        };
+        onid0.onmouseout=function(){
+            onid0.style.background = "#aaa";
+            onid0.style.color="black";
+            onid0_ul[0].style.display="none";
+        };
+        var onid1=inlist[1];
+        var onid1_ul=onid1.getElementsByTagName("ul");
+        onid1.onmouseover = function () {
+            onid1.style.background = "red";
+            onid1.style.color="white";
+            onid1_ul[0].style.display="block";
+        };
+        onid1.onmouseout=function(){
+            onid1.style.background = "#aaa";
+            onid1.style.color="black";
+            onid1_ul[0].style.display="none";
+        };
+        var onid2=inlist[2];
+        var onid2_ul=onid2.getElementsByTagName("ul");
+        onid2.onmouseover = function () {
+            onid2.style.background = "red";
+            onid2.style.color="white";
+            onid2_ul[0].style.display="block";
+        };
+        onid2.onmouseout=function(){
+            onid2.style.background = "#aaa";
+            onid2.style.color="black";
+            onid2_ul[0].style.display="none";
+        };
+        var onid3=inlist[3];
+        var onid3_ul=onid3.getElementsByTagName("ul");
+        onid3.onmouseover = function () {
+            onid3.style.background = "red";
+            onid3.style.color="white";
+            onid3_ul[0].style.display="block";
+        };
+        onid3.onmouseout=function(){
+            onid3.style.background = "#aaa";
+            onid3.style.color="black";
+            onid3_ul[0].style.display="none";
+        };
+        var onid4=inlist[4];
+        var onid4_ul=onid4.getElementsByTagName("ul");
+        onid4.onmouseover = function () {
+            onid4.style.background = "red";
+            onid4.style.color="white";
+            onid4_ul[0].style.display="block";
+        };
+        onid4.onmouseout=function(){
+            onid4.style.background = "#aaa";
+            onid4.style.color="black";
+            onid4_ul[0].style.display="none";
+        };
+        var onid5=inlist[5];
+        var onid5_ul=onid5.getElementsByTagName("ul");
+        onid5.onmouseover = function () {
+            onid5.style.background = "red";
+            onid5.style.color="white";
+            onid5_ul[0].style.display="block";
+        };
+        onid5.onmouseout=function(){
+            onid5.style.background = "#aaa";
+            onid5.style.color="black";
+            onid5_ul[0].style.display="none";
+        };
+
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width:600px;
+            height:400px;
+            border:1px solid #444;
+            position: relative;
+        }
+        #on{
+            position: absolute;
+            left:45%;
+            bottom: 0px;
+        }
+        .in_a{
+            position: absolute;
+            display: block;
+            left:55%;bottom: 0px;
+            text-decoration: none;
+            font-size: 14px;
+            color: #333333;
+        }
+        .in_a:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="inbox">
+    <input type="button" id="on" onclick="aa()" value="开始"/>
+    <a href="hwday23.html" class="in_a">重新开始</a>
+</div>
+<script>
+    var inbox=document.getElementById("inbox");
+    for(var i=0;i<198;i++){
+        var indiv=document.createElement("div");
+        indiv.style.cssText="width:10px;height:10px;float:left;margin-top:10px;margin-left:20px;border:1px solid #ddd;border-radius:50%";
+        indiv.id="id"+i;
+        inbox.appendChild(indiv);
+    }
+    var incolor=inbox.getElementsByTagName("div");
+    var incc=["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+    var time_in=0;
+    var xin_in=0;
+    var open=1;
+    function bb(){
+        var chose_c="#";
+        var one=parseInt(Math.random()*16);
+        var two=parseInt(Math.random()*16);
+        var three=parseInt(Math.random()*16);
+        for(var i=0;i<incolor.length;i++){
+            switch (incolor[i].id){
+                case "id188":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id171":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px"}break;
+                case "id154":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id137":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id119":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id101":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id82":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id63":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id80":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id61":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id78":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id95":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id113":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id131":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id150":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                case "id169":{
+                incolor[i].style.border="2px solid red";
+                incolor[i].style.width="8px";incolor[i].style.height="8px";}break;
+                default:{
+            chose_c=chose_c+incc[(time_in+one)%16]+incc[(time_in+two)%16]+incc[(time_in+three)%16];
+            incolor[i].style.background=chose_c;
+//            console.log(chose_c);
+            chose_c="#";
+            time_in++;}
+            }
+        }
+
+        switch(xin_in%16){
+            case 0:{
+                if(xin_in%32==16){
+                    incolor[188].style.background="white";
+                }else{
+                    incolor[188].style.background="red";
+                }}break;
+            case 1:{
+                if(xin_in%32==17){
+                    incolor[171].style.background="white";
+                }else{
+                    incolor[171].style.background="red";
+                }}break;
+            case 2:{
+                if(xin_in%32==18){
+                    incolor[154].style.background="white";
+                }else{
+                    incolor[154].style.background="red";
+                }}break;
+            case 3:{
+                if(xin_in%32==19){
+                    incolor[137].style.background="white";
+                }else{
+                    incolor[137].style.background="red";
+                }}break;
+            case 4:{
+                if(xin_in%32==20){
+                    incolor[119].style.background="white";
+                }else{
+                    incolor[119].style.background="red";
+                }}break;
+            case 5:{
+                if(xin_in%32==21){
+                    incolor[101].style.background="white";
+                }else{
+                    incolor[101].style.background="red";
+                }}break;
+            case 6:{
+                if(xin_in%32==22){
+                    incolor[82].style.background="white";
+                }else{
+                    incolor[82].style.background="red";
+                }}break;
+            case 7:{
+                if(xin_in%32==23){
+                    incolor[63].style.background="white";
+                }else{
+                    incolor[63].style.background="red";
+                }}break;
+            case 8:{
+                if(xin_in%32==24){
+                    incolor[80].style.background="white";
+                }else{
+                    incolor[80].style.background="red";
+                }}break;
+            case 9:{
+                if(xin_in%32==25){
+                    incolor[61].style.background="white";
+                }else{
+                    incolor[61].style.background="red";
+                }}break;
+            case 10:{
+                if(xin_in%32==26){
+                    incolor[78].style.background="white";
+                }else{
+                    incolor[78].style.background="red";
+                }}break;
+            case 11:{
+                if(xin_in%32==27){
+                    incolor[95].style.background="white";
+                }else{
+                    incolor[95].style.background="red";
+                }}break;
+            case 12:{
+                if(xin_in%32==28){
+                incolor[113].style.background="white";
+            }else{
+                incolor[113].style.background="red";
+            }}break;
+            case 13:{
+                if(xin_in%32==29){
+                    incolor[131].style.background="white";
+                }else{
+                    incolor[131].style.background="red";
+                }}break;
+            case 14:{
+                if(xin_in%32==30){
+                    incolor[150].style.background="white";
+                }else{
+                    incolor[150].style.background="red";
+                }}break;
+            case 15:{
+                if(xin_in%32==31){
+                    incolor[169].style.background="white";
+                }else{
+                    incolor[169].style.background="red";
+                }}break;
+        }
+        xin_in++;
+    }
+    var on_open;
+    var on_id=document.getElementById("on");
+    function aa(){
+        open++;
+        if((open%2==0)){
+        on_open=setInterval(bb,140);
+            on_id.value="暂停";
+        }else{
+            clearInterval(on_open);
+            on_id.value="继续";
+        }
+    }
+</script>
+</body>
+</html>

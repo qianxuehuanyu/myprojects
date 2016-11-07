@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    </style>
+</head>
+<body>
+<textarea id="testmain" rows="20" cols="50">    </textarea>
+<a href="javascript:;" onclick="try{aasdafe();}catch(e){alert('语句异常：'+e.message)}" class="btns">在线调试</a>
+<script>
+    var front=document.body.innerHTML;
+    function aasdafe(){
+        var onid=document.getElementById("testmain");
+        var ontext=onid.value;
+        console.log(ontext);
+        document.writeln(front+ontext);
+        console.log(front+ontext);
+        front=null;ontext=null;
+    }
+</script>
+</body>
+</html>

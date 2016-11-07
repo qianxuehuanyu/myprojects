@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.body.style.margin="0px";
+    document.body.style.padding="0px";
+    var box1=document.createElement("div");
+    box1.style.cssText="width:5%;height:1000px;background:#f40;";
+    box1.style.position="fixed";
+    box1.style.left="0px";
+    box1.style.top="0px";
+    document.body.appendChild(box1);
+    var box2=document.createElement("div");
+    box2.style.cssText="width:30%;height:1000px;background:#e91;";
+    box2.style.position="fixed";
+    box2.style.left="5%";
+    box2.style.top="0px";
+    document.body.appendChild(box2);
+    var box3=document.createElement("div");
+    box3.style.cssText="width:65%;height:100px;background:#a21;";
+    box3.style.position="fixed";
+    box3.style.left="35%";
+    box3.style.top="0px";
+    document.body.appendChild(box3);
+
+    var box4=document.createElement("div");
+    box4.style.cssText="width:65%;height:1800px;background:#611;";
+    box4.style.float="right";
+    box4.style.marginTop="100px";
+    document.body.appendChild(box4);
+    var box4_top=document.createElement("div");
+    box4_top.style.cssText="width:95%;height:70px;background:#666;";
+    box4_top.style.float="left";
+    box4_top.style.marginTop="10px";
+    box4.appendChild(box4_top);
+    for(var i= 0;i<20;i++){
+        var box4_in=document.createElement("div");
+        box4_in.style.cssText="width:95%;height:70px;background:#999;";
+        box4_in.style.float="left";
+        box4_in.style.left="0px";
+        box4_in.style.marginTop="10px";
+        box4.appendChild(box4_in);
+    }
+    var box4_bottom=document.createElement("div");
+    box4_bottom.style.cssText="width:95%;height:70px;background:#666;";
+    box4_bottom.style.float="left";
+    box4_bottom.style.marginTop="10px";
+    box4.appendChild(box4_bottom);
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var animal=function(_name){
+//        this.name=_name;
+//        console.log(this);
+//        console.log(_name);
+//    }
+//    var preson= function (_name) {
+//        animal.call(this,_name);
+//    }
+//    var dog=new animal("1111");
+//    var xiaoming=new preson("2222");
+//    对象的方法
+//    * 创建《xiaoMing》的时候  的 执行过程
+//    * 1.进入 Person的构造方法
+//    * 2.进入 Person的构造方法 之后  会执行 Animal.call
+//    * 3.执行 Animal.call -> 进入Animal的构造方法 同时把 Person里面的this和参数name传入到Animal中
+//    * 4.这时候Animal中的this 就不再是Animal实例化的对象
+//    * 5.Animal（this） = Person(this) ->this现在就是Person里面的this
+
+//====================================================
+//实现继承的方法
+//superType 父类
+//subType 子类
+function inherit(superType,subType) {
+    //得到父类的原型
+    var _prototype = Object.create(superType.prototype);
+    //把父类的构造器指定成 子类的构造器
+    _prototype.constructor = subType;
+    //把子类的原型（真身）指定为父类的原型
+    subType.prototype = _prototype;
+}
+var animal=function(_anmial){
+    this.type="动物:"+_anmial;
+    this.speak=function(){
+        console.log("111");
+    }
+};
+var heros=function(_anmial,_blood,_att){
+    this.blood=_blood;
+    this.att=_att;
+    animal.call(this,_anmial);
+};
+inherit(animal,heros);
+var were=new heros(1,2,3);
+were.speak();
+console.log("=====================");
+var magic_heros=function(_anmial,_blood,_att,_margickind){
+    this.skill="魔法："+_margickind;
+    heros.call(this,_anmial,_blood,_att);
+};
+inherit(heros,magic_heros);
+var haitun=new magic_heros("海豚","300","30","水系");
+haitun.name="阿蓝";
+console.log(haitun);
+haitun.speak();
+var mafeng=new magic_heros("马蜂","300","40","毒系");
+mafeng.name="阿黄";
+mafeng.speak();
+console.log(mafeng);
+
+var phy_heros=function(_anmial,_blood,_att,_phyadd){
+    this.skill="物理攻击类型："+_phyadd;
+    heros.call(this,_anmial,_blood,_att);
+};
+inherit(heros,phy_heros);
+var labuladuo=new phy_heros("狗狗","300","50","近身系");
+labuladuo.name="拉布拉多";
+labuladuo.speak();
+console.log(labuladuo);
+var feifei=new phy_heros("狒狒","300","30","远程系");
+feifei.name="赖皮猴";
+feifei.speak();
+console.log(feifei);
+
+var monsters=function(_anmial,_blood,_att){
+    this.blood=_blood;
+    this.att=_att;
+    animal.call(this,_anmial);
+};
+inherit(animal,monsters);
+var magic_monsters=function(_anmial,_blood,_att,_margickind){
+    this.skill="魔法："+_margickind;
+    monsters.call(this,_anmial,_blood,_att);
+}
+inherit(monsters,magic_monsters);
+var phy_monsters=function(_anmial,_blood,_att,_phyadd){
+    this.skill="物理攻击类型："+_phyadd;
+    monsters.call(this,_anmial,_blood,_att);
+}
+inherit(monsters,phy_monsters);
+var shayu=new magic_heros("鲨鱼","400","20","冰系");
+shayu.name="蓝霸";
+shayu.speak();
+console.log(shayu);
+var yanjingshe=new magic_heros("眼镜蛇","200","30","毒系");
+yanjingshe.name="死者";
+yanjingshe.speak();
+console.log(yanjingshe);
+var gouxiong=new phy_heros("狗熊","100","60","近身系");
+gouxiong.name="熊吼";
+gouxiong.speak();
+console.log(gouxiong);
+var jindiao=new phy_heros("金雕","200","30","远程系");
+jindiao.name="小鲲鹏";
+jindiao.speak();
+console.log(jindiao);
+
+
+</script>
+</body>
+</html>

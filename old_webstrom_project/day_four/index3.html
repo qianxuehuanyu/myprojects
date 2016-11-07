@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			canvas{
+				background-color:#e4393c;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" width="300px" height="300px"></canvas>
+		<!--画布-->
+		<script>
+			var canvas=document.getElementById('canvas');
+			var context=canvas.getContext('2d');
+			//创建开始标识路径
+			context.beginPath();
+			context.arc(100,100,50,0,Math.PI*2,true);
+			//结束
+//			context.fillStyle='greenyellow'
+			context.closePath();
+			//context.fill();   //填充
+			context.stroke();//空心
+			
+			
+			context.beginPath();
+			context.arc(100,100,50,0,Math.PI*1,false);
+			context.fillStyle='white';
+			context.closePath();
+			context.fill();
+			
+			context.beginPath();
+			context.arc(100,100,50,0,Math.PI*1,true);
+			context.fillStyle='black';
+			context.closePath();
+			context.fill();
+			
+			
+			context.beginPath();
+			context.arc(75,100,25,0,Math.PI*1,false);
+			context.fillStyle='black';
+			context.closePath();
+			context.fill();
+			
+			context.beginPath();
+			context.arc(125,100,25,0,Math.PI*1,true);
+			context.fillStyle='white';
+			context.closePath();
+			context.fill();
+			
+			
+			context.beginPath();
+			context.arc(75,100,10,0,Math.PI*2,false);
+			context.fillStyle='white';
+			context.closePath();
+			context.fill();
+			
+			context.beginPath();
+			context.arc(125,100,10,0,Math.PI*2,true);
+			context.fillStyle='black';
+			context.closePath();
+			context.fill();
+		</script>
+		
+	</body>
+</html>
